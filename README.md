@@ -1,7 +1,8 @@
 # NewToDoList
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4. <br>
-ng add @angular/material
+
+## ng add @angular/material
 
 ## Development server
 
