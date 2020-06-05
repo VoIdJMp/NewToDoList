@@ -1,0 +1,24 @@
+<mat-toolbar>TODO List</mat-toolbar>
+<div class = "container">
+  <div class="main-form">
+    <form>
+      <mat-form-field class = "desc-form">
+        <mat-label>Название задачи</mat-label>
+        <input matInput name = "dataTask.description" placeholder="" [(ngModel)]="dataTask.description">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Выберите дату</mat-label>
+        <input matInput name = "dataTask.start_date" [matDatepicker]="picker" [(ngModel)]="dataTask.start_date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <div class="ngx-timepicker-field-example">
+        <ngx-timepicker-field name = "dataTask.start_time" [format]="24" [(ngModel)]="dataTask.start_time"></ngx-timepicker-field>
+      </div>
+      <div style = "margin-top: 10px; float: right;">
+        <a class="btn btn-primary" routerLink="" role="button" style = "margin-right: 10px;">Назад</a>
+        <button class="btn btn-success" (click)="AddTask()">Добавить задачу</button>
+      </div>
+    </form>
+  </div>
+</div>

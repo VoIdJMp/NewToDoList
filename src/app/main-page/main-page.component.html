@@ -1,0 +1,19 @@
+<mat-toolbar>TODO List</mat-toolbar>
+<div class = "container">
+  <div class="main-form">
+    <a class="btn btn-primary" routerLink="/addTask" role="button">Добавить задачу</a>
+  </div>
+  <div class="list-group" style = "margin-top: 50px;">
+    <div *ngFor = "let i of this.taskArray; let j = index;">
+      <a class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{i.description}}</h5>
+          <small>{{i.start_time}}</small>
+        </div>
+        <p class="mb-1">{{i.start_date | convertPipe}}</p>
+        <a class="btn btn-primary" [routerLink]="['/task', j]"  role="button">Редактировать</a>
+        <button type="button" class="btn btn-danger" style="margin-left: 10px;" (click)="delateTask(j)">Удалить</button>
+      </a>
+    </div>
+  </div>
+</div>
