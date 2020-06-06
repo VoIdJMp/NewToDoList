@@ -8,11 +8,6 @@ import { MainService } from './services/main.service';
 })
 
 export class MainPageComponent implements OnInit{
-  dataTask: {description: string, start_date: any, start_time: any} = {
-    description: '',
-    start_date: '',
-    start_time: ''
-  };
   taskArray: any[] = [];
 
   constructor(private mainService: MainService) { }
@@ -24,5 +19,4 @@ export class MainPageComponent implements OnInit{
   delateTask(idx: number) {
     this.taskArray.splice(idx, 1);
   }
-
 }
